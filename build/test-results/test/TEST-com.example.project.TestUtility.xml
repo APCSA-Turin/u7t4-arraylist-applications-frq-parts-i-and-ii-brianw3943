@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestUtility" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-02-12T17:30:44" hostname="codespaces-11356c" time="0.069">
+<testsuite name="com.example.project.TestUtility" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-02-13T17:31:00" hostname="codespaces-11356c" time="0.062">
   <properties/>
-  <testcase name="testSort()" classname="com.example.project.TestUtility" time="0.069">
+  <testcase name="testSort()" classname="com.example.project.TestUtility" time="0.062">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;[Marie Angelina: 96.5, Chase Bean: 95.2, Jack Clancy: 97.3, Lisa Frank: 99.5, Lisa Frank: 92.4, Peter Frank: 97.9, Brittany Jones: 95.5, Dean Jones: 93.2, Michelle Jones: 98.1, Abby Smith: 96.7]&gt; but was: &lt;[Abby Smith: 96.7, Michelle Jones: 98.1, Chase Bean: 95.2, Jack Clancy: 97.3, Brittany Jones: 95.5, Lisa Frank: 92.4, Marie Angelina: 96.5, Peter Frank: 97.9, Lisa Frank: 99.5, Dean Jones: 93.2]&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;[Marie Angelina: 96.5, Chase Bean: 95.2, Jack Clancy: 97.3, Lisa Frank: 99.5, Lisa Frank: 92.4, Peter Frank: 97.9, Brittany Jones: 95.5, Dean Jones: 93.2, Michelle Jones: 98.1, Abby Smith: 96.7]&gt; but was: &lt;[Abby Smith: 96.7, Michelle Jones: 98.1, Chase Bean: 95.2, Jack Clancy: 97.3, Brittany Jones: 95.5, Lisa Frank: 92.4, Marie Angelina: 96.5, Peter Frank: 97.9, Lisa Frank: 99.5, Dean Jones: 93.2]&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)

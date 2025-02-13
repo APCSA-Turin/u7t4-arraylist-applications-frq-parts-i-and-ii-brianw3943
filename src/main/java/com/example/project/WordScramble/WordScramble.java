@@ -13,32 +13,23 @@ public class WordScramble {
    *  - letters were swapped at most once
    */
   public static String scrambleWord(String word) {
-    if (word.length() == 0) {
-      return word;
-    } else {
-      for (int i = 0; i < word.length() - 1; i++) {
-        if (word.substring(i, i + 1).equals("A") && !word.substring(i + 1, i + 2).equals("A")) {
-          String firstHalf;
-          String secondHalf;
-          if ((i != 0) && (i + 2 != word.length() - 1)) {
-            firstHalf = word.substring(0, i);
-            secondHalf = word.substring(i + 2);
-            word = firstHalf + word.substring(i + 1, i + 2) + word.substring(i, i + 1) + secondHalf;
-          } else if (i != 0) {
-            firstHalf = word.substring(0, i);
-            word = firstHalf + word.substring(i + 1, i + 2) + word.substring(i, i + 1);
-          } else if (i + 2 != word.length() - 1) {
-            secondHalf = word.substring(i + 2);
-            word = word.substring(i + 1, i + 2) + word.substring(i, i + 1) + secondHalf;
-          } else {
-            word = word.substring(i + 1, i + 2) + word.substring(i, i + 1);
-          }
-          i++;
-         
+    ArrayList<String> wordAsList = new ArrayList<>();
+    String word2 = "";
+    for (int i = 0; i < word.length(); i++) {
+      wordAsList.add(word.substring(i, i + 1));
+    }
+    for (int i = 0; i < word.length() - 1; i++) {
+      if (word.substring(i, i + 1).equalsIgnoreCase("a")) {
+        if (!word.substring(i + 1, i + 2).equalsIgnoreCase("a")) {
+          wordAsList.add(i, wordAsList.remove(i + 1));
         }
       }
-      return word;
     }
+    for (int i = 0; i < wordAsList.size(); i++) {
+      word2 += wordAsList.get(i);
+    }
+    word = word2;
+    return word;
   }
 
 
@@ -55,12 +46,21 @@ public class WordScramble {
    *    before the method was called
    */
   public static ArrayList<String> scrambleOrRemove(ArrayList<String> wordList) {
-    ArrayList<String> list = new ArrayList<String>();  
-    for (String string : wordList) {
-        if (scrambleWord(string) != string) {
-          list.add(scrambleWord(string));
+    for (int i = 0; i < wordList.size(); i++) {
+      int count = 0;
+      for (int j = 0; j < wordList.get(i).length(); j++) {
+        if (wordList.get(i).substring(j, j + 1).equals(scrambleWord(wordList.get(i)).substring(j, j + 1))) {
+          count++;
         }
       }
-      return list;
+      if (count == wordList.get(i).length()) {
+        wordList.remove(i);
+        i--;
+      }
+    }
+    for (int i = 0; i < wordList.size(); i++) {
+      wordList.set(i, scrambleWord(wordList.get(i)));
+    }
+    return wordList;
   }
 }

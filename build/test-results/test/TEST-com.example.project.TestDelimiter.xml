@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestDelimiter" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-12T17:30:44" hostname="codespaces-11356c" time="0.002">
+<testsuite name="com.example.project.TestDelimiter" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-13T17:31:00" hostname="codespaces-11356c" time="0.005">
   <properties/>
   <testcase name="testGetDelimiterListPARTA()" classname="com.example.project.TestDelimiter" time="0.001"/>
-  <testcase name="testIsBalanced()" classname="com.example.project.TestDelimiter" time="0.0"/>
+  <testcase name="testIsBalanced()" classname="com.example.project.TestDelimiter" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
